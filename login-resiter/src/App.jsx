@@ -7,8 +7,8 @@ const App = () => {
     <>
       {
         islogin
-          ? <Login onSwitch={() => setLogin(false)} />
-          : <Register onSwitch={() => setLogin(true)} />
+          ? <Login onSwitch={() => setLogin(prev => !prev)} />
+          : <Register onSwitch={() => setLogin(prev => !prev)} />
       }
     </>
   )
